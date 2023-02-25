@@ -6,8 +6,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthGuard } from './shared';
-import { LanguageTranslationModule } from './shared/modules/language-translation/language-translation.module';
+import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './common/header/header.component';
+import { FooterComponent } from './common/footer/footer.component';
+import { AboutusComponent } from './pages/aboutus/aboutus.component';
+
+
 
 @NgModule({
     imports: [
@@ -15,11 +19,10 @@ import { LanguageTranslationModule } from './shared/modules/language-translation
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        LanguageTranslationModule,
         AppRoutingModule
     ],
-    declarations: [AppComponent],
-    providers: [AuthGuard],
+    declarations: [AppComponent, HomeComponent, HeaderComponent, FooterComponent, AboutusComponent],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
