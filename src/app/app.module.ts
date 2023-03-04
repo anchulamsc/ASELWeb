@@ -10,6 +10,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
+import { CommonService } from './services/common.service';
+import { FundListComponent } from './pages/fund-list/fund-list.component';
+import { AselAgentsComponent } from './pages/agents/asel-agents/asel-agents.component';
+import { AgentSearchComponent } from './pages/agents/agent-search/agent-search.component';
+import { AgentDashboardComponent } from './pages/agents/agent-dashboard/agent-dashboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,12 +23,15 @@ import { AboutusComponent } from './pages/aboutus/aboutus.component';
     imports: [
         CommonModule,
         BrowserModule,
-        BrowserAnimationsModule,
+        AppRoutingModule,
         HttpClientModule,
-        AppRoutingModule
+        BrowserAnimationsModule,
+        ReactiveFormsModule,
+        FormsModule
+
     ],
-    declarations: [AppComponent, HomeComponent, HeaderComponent, FooterComponent, AboutusComponent],
-    providers: [],
+    declarations: [AppComponent, HomeComponent, HeaderComponent, FooterComponent, AboutusComponent, FundListComponent, AselAgentsComponent, AgentSearchComponent, AgentDashboardComponent],
+    providers: [CommonService],
     bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
